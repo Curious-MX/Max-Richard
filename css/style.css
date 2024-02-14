@@ -210,21 +210,26 @@ span {
 @keyframes words {
 
     0%,
-    25% {
+    20% {
         content: 'junior developer';
     }
 
-    26%,
-    50% {
+    21%,
+    40% {
         content: 'programer';
     }
 
-    51%,
-    75% {
+    41%,
+    60% {
+        content: 'junior developer';
+    }
+
+    41%,
+    80% {
         content: 'Web Designer';
     }
 
-    76%,
+    81%,
     100% {
         content: 'Web Developer';
     }
@@ -256,4 +261,206 @@ span {
     85% {
         width: calc(100% + 8px);
     }
+}
+
+/* about */
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    background: var(--second-bg-color);
+}
+
+.about-img {
+    border-radius: 50%;
+}
+
+.about-img  img{
+    position: relative;
+    width: 30vw;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.heading {
+    text-align: center;
+    font-size: 8rem;
+}
+
+.about-content h2 {
+    text-align: left;
+    line-height: 1.5;
+}
+
+.about-content h3 {
+    font-size: 2.6rem;
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+.about-content .text-animation span::before {
+    content: 'programer';
+    color: var(--main-color);
+    animation: words 20s infinite;
+}
+
+.about-content .text-animation span::after {
+    content: '';
+    background-color: var(--second-bg-color);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 2px solid #333;
+    right: -8px;
+    animation: curser 0.6s infinite, typing 20s steps(14) infinite;
+}
+
+/* services */
+
+.services h2 {
+    margin-bottom: 5rem;
+}
+
+.services-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.services-container .services-box {
+    flex: 1 1 40rem;
+    background: var(--second-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: 0.2rem solid var(--bg-color);
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.services-container .services-box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.02);
+    background-color: white;
+    color: black;
+}
+
+.services-box i {
+    font-size: 7rem;
+    color: var(--main-color);
+}
+
+.services-box h3 {
+    font-size: 2.6rem;
+}
+
+.services-box p {
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+}
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: var(--main-color);
+}
+
+::-webkit-scrollbar-track {
+    background-color: #1d1d1d;
+    width: 50px;
+}
+
+/* projects */
+
+.projects {
+    background: var(--second-bg-color);
+}
+
+.projects h2 {
+    margin-bottom: 5rem;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.projects-container .projects-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+}
+
+.projects-box img {
+    width: 100%;
+    transition: 0.5s ease;
+}
+
+.projects-box:hover img {
+    transform: scale(1.1);
+}
+
+.projects-box .projects-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.projects-box .projects-info:hover {
+    background: radial-gradient(rgba(0, 0, 0, 0.5), var(--main-color));
+    transform: scale(1.1);
+}
+
+.projects-info h4 {
+    font-size: 3rem;
+    color: white;
+    font-weight: 800;
+}
+
+.projects-info p {
+    font-size: 1.6rem;
+    margin: 0.3rem 0 1rem;
+    font-weight: 600;
+}
+
+.projects-info a {
+    color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+
+.projects-info a i {
+    font-size: 3rem;
+    color: var(--main-color);
 }
