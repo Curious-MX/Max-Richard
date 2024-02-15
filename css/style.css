@@ -95,38 +95,20 @@ body {
     align-items: center;
 }
 
-/* .nav-link {
-    font-size: 1.6rem;
-    font-weight: 400;
-    color: #475569;
-  } */
-
-/* .nav-link:hover {
-    color: #482ff7;
-  } */
-
-
-
-/* .nav-logo {
-    font-size: 2.1rem;
-    font-weight: 500;
-    color: #482ff7;
-  } */
-
-
 ul.nav-menu.active {
     display: block;
 }
 
 /* Inside the Media Query. */
 
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
 .hamburger.active .bar:nth-child(2) {
     opacity: 0;
 }
 
-.hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-}
 
 .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
@@ -148,12 +130,6 @@ ul.nav-menu.active {
     text-shadow: 0 0 25px var(--main-color),
         0 0 50px var(--main-color);
 }
-
-/* #menu-icon {
-    font-size: 3.6rem;
-    color: var(--main-color);
-    display: none;
-  } */
 
 section {
     min-height: 100vh;
@@ -471,7 +447,7 @@ span {
 
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 2.5rem;
 }
@@ -515,13 +491,13 @@ span {
 }
 
 .projects-info h4 {
-    font-size: 3rem;
+    font-size: 4rem;
     color: white;
     font-weight: 800;
 }
 
 .projects-info p {
-    font-size: 1.6rem;
+    font-size: 2rem;
     margin: 0.3rem 0 1rem;
     font-weight: 600;
 }
@@ -531,14 +507,14 @@ span {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 5rem;
-    height: 5rem;
+    width: 6rem;
+    height: 6rem;
     background: var(--text-color);
     border-radius: 50%;
 }
 
 .projects-info a i {
-    font-size: 3rem;
+    font-size: 4rem;
     color: var(--main-color);
 }
 
@@ -632,7 +608,6 @@ span {
     box-shadow: 0 0 25px gold,
         0 0 50px gold;
 }
-
 
 .bars .progress-line.react span {
     width: 2%;
@@ -900,21 +875,35 @@ span {
 
 }
 
-@media(max-width:630px) {
-    .projects-info p {
-        display: none;
+@media only screen and (max-width: 600px) {
+    .home-content h1 {
+        font-size: 2rem;
     }
 
     .home-content h1 {
-        font-size: 3rem;
-    }
-
-    .home-content h1 {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .home-content span {
-        font-size: 3rem;
+        font-size: 2rem;
+    }
+
+    .projects-info h4 {
+        font-size: 2rem;
+    }
+
+    .projects-info a {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .home img,
+    .about img {
+        display: none;
+    }
+
+    .projects-info p {
+        display: none;
     }
 
     .text-animation span::after {
@@ -928,27 +917,6 @@ span {
         border-left: 2px solid #333;
         right: -8px;
         animation: curser 0.6s infinite, typing 20s steps(14) infinite;
-    }
-
-    .home img,
-    .about img {
-        display: none;
-    }
-}
-
-@media(max-width:576px) {
-
-    .projects-info h4 {
-        font-size: 2rem;
-    }
-
-    .projects-info p {
-        font-size: 1.5rem;
-    }
-
-    .projects-info a {
-        width: 5rem;
-        height: 5rem;
     }
 
     .home img,
