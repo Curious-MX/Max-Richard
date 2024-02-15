@@ -277,7 +277,7 @@ span {
     border-radius: 50%;
 }
 
-.about-img  img{
+.about-img img {
     position: relative;
     width: 30vw;
     border-radius: 50%;
@@ -394,7 +394,7 @@ span {
 
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     gap: 2.5rem;
 }
@@ -463,4 +463,361 @@ span {
 .projects-info a i {
     font-size: 3rem;
     color: var(--main-color);
+}
+
+/* Skills */
+
+.skills h2 {
+    margin-bottom: 2rem;
+}
+
+.skills {
+    margin: 0 auto;
+}
+
+.skill-bars {
+    padding: 25px 30px;
+    background: var(--second-bg-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.skill-bars .bar {
+    margin: 20px 0;
+}
+
+.skill-bars .bar:first-child {
+    margin-top: 0px;
+}
+
+.skill-bars .bar .info {
+    margin-bottom: 5px;
+}
+
+.skill-bars .bar .bar .info span {
+    color: white;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.skill-bars .bar .progress-line {
+    height: 10px;
+    width: 100%;
+    background: white;
+    position: relative;
+    border-radius: 10px;
+}
+
+.bar .progress-line span {
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    background: #0077ff;
+    cursor: pointer;
+}
+
+
+.bar .progress-line.html span {
+    width: 100%;
+    background-color: orangered;
+    box-shadow: 0 0 25px orangered;
+    transition: 0.3s ease;
+}
+
+.bar .progress-line.html span:hover {
+    box-shadow: 0 0 25px orangered,
+        0 0 50px orangered;
+}
+
+
+.bar .progress-line.css span {
+    width: 80%;
+    background-color: blue;
+    box-shadow: 0 0 25px blue;
+    transition: 0.3s ease;
+}
+
+.bar .progress-line.css span:hover {
+    box-shadow: 0 0 25px blue,
+        0 0 50px blue;
+}
+
+
+.bar .progress-line.javascript span {
+    width: 20%;
+    background-color: gold;
+    box-shadow: 0 0 25px gold;
+    transition: 0.3s ease;
+}
+
+.bar .progress-line.javascript span:hover {
+    box-shadow: 0 0 25px gold,
+        0 0 50px gold;
+}
+
+
+.bar .progress-line.react span {
+    width: 2%;
+    background-color: rgb(58, 58, 255);
+    box-shadow: 0 0 25px rgb(58, 58, 255);
+    transition: 0.3s ease;
+}
+
+.bar .progress-line.react span:hover {
+    box-shadow: 0 0 25px rgb(58, 58, 255),
+        0 0 50px rgb(58, 58, 255);
+}
+
+/* Contact  */
+
+.contact {
+    background-color: var(--second-bg-color);
+}
+
+.contact h2 {
+    margin-bottom: 3rem;
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    border-radius: 0.8rem;
+    margin: 1rem 0;
+    resize: none;
+}
+
+.contact form .btn {
+    margin-top: 2rem;
+}
+
+/* footer */
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    background-color: var(--main-color);
+}
+
+.footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+    color: white;
+}
+
+.footer .social a {
+    font-size: 25px;
+    color: white;
+    border: 2px solid white;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.3s ease;
+}
+
+.footer .social a:hover {
+    transform: scale(1.2)translateY(-10px);
+}
+
+.footer ul {
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.footer ul li a {
+    color: white;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+
+.footer ul li a:hover {
+    border-bottom: 3px solid white;
+}
+
+.footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.footer .copyright {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+
+/* resposive */
+
+@media(max-width:1200px) {
+    .html {
+        font-size: 55%;
+    }
+}
+
+@media(max-width:991px) {
+    header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3% 2rem;
+    }
+
+    .services {
+        padding-bottom: 7rem;
+    }
+
+    .projects {
+        padding-bottom: 7rem;
+    }
+
+    .footer {
+        padding: 2rem 3%;
+    }
+}
+
+@media(max-width:895px) {
+    #menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--second-bg-color);
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.105);
+        display: none;
+    }
+
+    .navbar-active {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .home {
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home-content h3 {
+        font-size: 2.6rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+    }
+
+    .about-content {
+        margin: 1rem 4rem;
+    }
+
+    .about img {
+        width: 70vw;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .services h2 {
+        margin-bottom: 3rem;
+    }
+
+    .projects-container {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width:630px) {
+    .home-content h1 {
+        font-size: 4rem;
+    }
+
+    .home-content h3 {
+        font-size: 4rem;
+    }
+
+    .home-content span {
+        font-size: 4rem;
+    }
+
+    .text-animation span::after {
+        font-size: 4rem;
+        content: '';
+        background-color: var(--bg-color);
+        position: absolute;
+        width: calc(100% + 8px);
+        height: 130%;
+        border-left: 2px solid #333;
+        right: -8px;
+        animation: curser 0.6s infinite, typing 20s steps(14) infinite;
+    }
+
+    .home img, .about img {
+        display: none;
+    }
+}
+
+@media(max-width:576px) {
+    
+    .projects-info h4 {
+        font-size: 2rem;
+    }
+
+    .projects-info p {
+        font-size: 1.5rem;
+    }
+
+    .projects-info a {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .home img, .about img {
+        display: none;
+    }
 }
